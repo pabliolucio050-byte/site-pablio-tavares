@@ -1,0 +1,28 @@
+SITE PABLIO TAVARES + EBOOK A NOVA LÓGICA DOS NEGÓCIOS
+=========================================
+
+PUBLICAR NA VERCEL (sem programar)
+1. Crie uma conta gratuita em github.com
+2. Clique em "New repository", dê o nome "ebook-nova-logica" e clique em "Create repository"
+3. Clique em "uploading an existing file" e arraste TODO o conteúdo desta pasta (index.html, privacidade.html, package.json e as pastas assets, ebook e api). Clique em "Commit changes"
+4. Entre em vercel.com, faça login com o GitHub
+5. Clique em "Add New > Project", escolha o repositório "ebook-nova-logica" e clique em "Deploy"
+6. Pronto: a Vercel gera um link (ex: ebook-nova-logica.vercel.app). Coloque esse link na bio do Instagram
+
+RECEBER OS LEADS NO SEU CRM (Kommo, Make, Zapier, n8n, Google Sheets)
+1. Pegue a URL de webhook do seu CRM ou automação
+2. Na Vercel, abra o projeto > Settings > Environment Variables
+3. Nome: WEBHOOK_URL   Valor: (cole a URL do webhook)
+4. Salve e clique em Redeploy
+Cada formulário enviado manda: nome, whatsapp (com 55), ramo, perfil, origem, pagina e data.
+Enquanto o WEBHOOK_URL não estiver configurado, os leads aparecem em Vercel > projeto > Logs.
+
+META PIXEL (opcional)
+No arquivo index.html, procure PIXEL_ID: "" e cole o ID do seu pixel entre as aspas.
+O evento "Lead" é disparado quando alguém baixa o ebook.
+
+TROCAR O EBOOK
+Substitua o arquivo ebook/A-Nova-Logica-dos-Negocios.pdf mantendo o mesmo nome.
+
+DOMÍNIO PRÓPRIO (opcional)
+Vercel > projeto > Settings > Domains > adicione o seu domínio.

@@ -1,0 +1,580 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Pablio Tavares | Gestão comercial, CRM e IA para vender mais pelo WhatsApp</title>
+<meta name="description" content="Consultoria comercial para pequenas e médias empresas: CRM, funil de vendas, disparos seguros no WhatsApp, IA no atendimento 24h e treinamento de equipe. Goiânia e online.">
+<meta property="og:title" content="Pablio Tavares | Gestão comercial, CRM e IA">
+<meta property="og:description" content="Venda mais pelo WhatsApp com processo, CRM e inteligência artificial. Baixe grátis o ebook A Nova Lógica dos Negócios.">
+<meta property="og:image" content="/assets/og.jpg">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#121110">
+<style>
+@font-face{font-family:Poppins;src:url(/assets/Poppins-Bold.ttf);font-weight:700;font-display:swap}
+@font-face{font-family:Poppins;src:url(/assets/Poppins-Medium.ttf);font-weight:500;font-display:swap}
+@font-face{font-family:Inter;src:url(/assets/Inter-Regular.otf);font-weight:400;font-display:swap}
+@font-face{font-family:Inter;src:url(/assets/Inter-Medium.otf);font-weight:500;font-display:swap}
+@font-face{font-family:Inter;src:url(/assets/Inter-SemiBold.otf);font-weight:600;font-display:swap}
+:root{
+  --ink:#121110;--ink2:#1C1A18;--ink3:#2A2724;
+  --paper:#F6F2EC;--paper2:#ECE5DB;--white:#FFFFFF;
+  --o:#D97757;--o-d:#B85C3E;--o-l:#F3D5C7;
+  --tx:#1D1B19;--mu:#6B635B;--mu-d:#A79D93;--line:#E2D9CD;
+  --wa:#25D366;--wa-d:#063D20;
+  --r:18px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;overflow-x:hidden}
+body{font-family:Inter,system-ui,sans-serif;color:var(--tx);background:var(--paper);line-height:1.6;font-size:16.5px;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+h1,h2,h3,.ff{font-family:Poppins,Inter,sans-serif}
+a{color:inherit}
+img{max-width:100%;display:block}
+.wrap{max-width:1140px;margin:0 auto;padding:0 22px}
+section{padding:92px 0;position:relative}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:12.5px;font-weight:600;letter-spacing:2.5px;text-transform:uppercase;color:var(--o-d);margin-bottom:14px}
+.eyebrow:before{content:"";width:22px;height:2px;background:var(--o)}
+h2{font-size:clamp(28px,4.4vw,44px);line-height:1.12;font-weight:700;letter-spacing:-.6px;max-width:760px}
+h2 em,h1 em{font-style:normal;color:var(--o)}
+.sub{color:var(--mu);font-size:clamp(16px,2vw,18.5px);max-width:640px;margin-top:14px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border:none;cursor:pointer;font-family:Inter,sans-serif;font-weight:600;font-size:16px;border-radius:12px;padding:15px 24px;text-decoration:none;transition:transform .15s,box-shadow .15s,background .15s;white-space:nowrap}
+.btn:hover{transform:translateY(-2px)}
+.btn-o{background:var(--o);color:#fff;box-shadow:0 12px 28px -10px rgba(217,119,87,.7)}
+.btn-o:hover{background:var(--o-d)}
+.btn-wa{background:var(--wa);color:var(--wa-d);box-shadow:0 12px 28px -10px rgba(37,211,102,.6)}
+.btn-line{border:1.5px solid rgba(255,255,255,.25);color:#fff;background:rgba(255,255,255,.04)}
+.btn-dark{background:var(--ink);color:#fff}
+.btn svg{width:20px;height:20px}
+.dark{background:var(--ink);color:#EFE9E2}
+.dark .sub{color:var(--mu-d)}
+.dark .eyebrow{color:var(--o)}
+/* nav */
+nav{position:sticky;top:0;z-index:60;background:rgba(18,17,16,.86);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,.06)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:68px}
+.logo{display:flex;align-items:center;gap:10px;color:#fff;text-decoration:none;font-family:Poppins;font-weight:700;font-size:17px}
+.logo i{width:34px;height:34px;border-radius:10px;background:var(--o);display:flex;align-items:center;justify-content:center;font-style:normal;font-size:15px}
+.logo span{color:var(--o)}
+.menu{display:flex;gap:28px;align-items:center}
+.menu a{color:#CFC6BC;text-decoration:none;font-size:14.5px;font-weight:500}
+.menu a:hover{color:#fff}
+.menu .btn{padding:10px 16px;font-size:14px;color:var(--wa-d)}
+/* hero */
+.hero{background:var(--ink);color:#fff;padding:70px 0 0;overflow:hidden;position:relative}
+.hero:before{content:"";position:absolute;width:900px;height:900px;border-radius:50%;background:radial-gradient(circle,rgba(217,119,87,.22),transparent 62%);top:-420px;right:-300px}
+.hero .grid{display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:end;position:relative}
+.hero .pill{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:30px;padding:7px 14px;font-size:13px;color:#DCD3C9;margin-bottom:22px}
+.hero .pill b{width:8px;height:8px;border-radius:50%;background:var(--wa);box-shadow:0 0 0 4px rgba(37,211,102,.2)}
+.hero h1{font-size:clamp(36px,5.6vw,62px);line-height:1.05;font-weight:700;letter-spacing:-1.2px}
+.hero .sub{color:#B9AFA5;margin:22px 0 32px;font-size:clamp(16.5px,2vw,19px)}
+.hero .ctas{display:flex;gap:12px;flex-wrap:wrap}
+.hero .photo{position:relative;align-self:end}
+.hero .photo img{width:100%;max-width:430px;margin-left:auto;border-radius:220px 220px 0 0;border:3px solid var(--o);border-bottom:none;aspect-ratio:3/4;object-fit:cover;object-position:center 30%}
+.float{position:absolute;background:#fff;color:var(--tx);border-radius:14px;padding:12px 16px;box-shadow:0 18px 40px -12px rgba(0,0,0,.5);font-size:13.5px;display:flex;gap:10px;align-items:center}
+.float b{font-family:Poppins;font-size:20px;color:var(--o)}
+.f1{left:-10px;top:30%}.f2{right:-6px;bottom:22%}
+.trust{position:relative;margin-top:56px;border-top:1px solid rgba(255,255,255,.08);display:grid;grid-template-columns:repeat(4,1fr)}
+.trust div{padding:22px 18px;border-right:1px solid rgba(255,255,255,.08)}
+.trust div:last-child{border-right:none}
+.trust b{display:block;font-family:Poppins;font-size:24px;color:#fff}
+.trust span{font-size:13.5px;color:#A79D93}
+/* problems */
+.g4{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:44px}
+.g3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:44px}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.prob{background:var(--white);border:1px solid var(--line);border-radius:var(--r);padding:24px}
+.prob .n{font-family:Poppins;font-weight:700;font-size:13px;color:var(--o);letter-spacing:1px}
+.prob h3{font-size:18px;margin:8px 0 6px;line-height:1.3}
+.prob p{color:var(--mu);font-size:15px}
+.quote{margin-top:28px;display:flex;gap:16px;align-items:center;background:var(--paper2);border-radius:var(--r);padding:18px 22px;font-size:16px}
+.quote b{font-family:Poppins;font-size:30px;color:var(--o);line-height:1}
+/* services */
+.svc{background:var(--ink2);border:1px solid rgba(255,255,255,.07);border-radius:var(--r);padding:28px;transition:border .2s,transform .2s;position:relative;overflow:hidden}
+.svc:hover{border-color:rgba(217,119,87,.6);transform:translateY(-4px)}
+.svc .ic{width:52px;height:52px;border-radius:14px;background:rgba(217,119,87,.14);border:1px solid rgba(217,119,87,.35);display:flex;align-items:center;justify-content:center;margin-bottom:18px}
+.svc .ic svg{width:26px;height:26px;stroke:var(--o)}
+.svc h3{font-size:19px;color:#fff;margin-bottom:8px;line-height:1.3}
+.svc p{color:#A79D93;font-size:15px}
+.svc ul{list-style:none;margin-top:14px;display:flex;flex-direction:column;gap:7px}
+.svc li{font-size:14px;color:#D6CDC3;padding-left:22px;position:relative}
+.svc li:before{content:"";position:absolute;left:0;top:7px;width:12px;height:7px;border-left:2px solid var(--o);border-bottom:2px solid var(--o);transform:rotate(-45deg)}
+.svc.hl{background:linear-gradient(160deg,rgba(217,119,87,.2),var(--ink2) 60%);border-color:rgba(217,119,87,.5)}
+.svc .tagx{position:absolute;top:18px;right:18px;background:var(--o);color:#fff;font-size:11px;font-weight:600;border-radius:20px;padding:4px 10px;letter-spacing:.5px}
+/* disparos */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.funnelnum{display:flex;flex-direction:column;gap:10px}
+.fn{display:flex;align-items:center;gap:18px;border-radius:16px;padding:18px 22px;color:#fff}
+.fn b{font-family:Poppins;font-size:40px;line-height:1;min-width:92px}
+.fn span{font-size:15.5px}
+.fn1{background:var(--ink);width:100%}
+.fn2{background:var(--ink3);width:84%;margin-left:8%;border:1.5px solid var(--o)}
+.fn3{background:var(--o);width:68%;margin-left:16%}
+.small{font-size:13.5px;color:var(--mu);margin-top:12px;text-align:center}
+.warn{margin-top:28px;background:#FFF4F1;border:1.5px solid #F2B8A6;border-radius:var(--r);padding:22px}
+.warn h3{font-size:17px;color:#A13A1B;display:flex;gap:8px;align-items:center;margin-bottom:8px}
+.warn p{font-size:15px;color:#5E3A2E}
+.checks{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:22px}
+.checks div{background:var(--white);border:1px solid var(--line);border-radius:12px;padding:12px 14px;font-size:14.5px;display:flex;gap:10px;align-items:flex-start}
+.checks div:before{content:"✓";color:#fff;background:var(--wa);border-radius:50%;width:20px;height:20px;flex:none;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;margin-top:1px}
+/* funil */
+.steps7{display:grid;grid-template-columns:repeat(7,1fr);gap:0;margin-top:50px;position:relative}
+.steps7:before{content:"";position:absolute;top:27px;left:7%;right:7%;height:2px;background:linear-gradient(90deg,var(--o),#3FB37F)}
+.st{text-align:center;position:relative;padding:0 6px}
+.st i{font-style:normal;width:56px;height:56px;border-radius:50%;background:var(--ink);border:2px solid var(--o);display:flex;align-items:center;justify-content:center;margin:0 auto 14px;font-family:Poppins;font-weight:700;color:#fff;font-size:18px;position:relative}
+.st.goal i{background:#2E9E6C;border-color:#5FD39A}
+.st b{display:block;color:#fff;font-size:15px;font-family:Poppins;font-weight:500}
+.st span{font-size:13px;color:#A79D93;display:block;margin-top:4px;line-height:1.4}
+.lost{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:50px}
+.lost div{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:14px;padding:18px}
+.lost b{display:block;color:#fff;margin:6px 0 4px;font-family:Poppins;font-weight:500}
+.lost span{font-size:14px;color:#A79D93}
+.lost .e{font-size:24px}
+/* metodo */
+.method{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:44px;counter-reset:m}
+.mt{background:var(--white);border:1px solid var(--line);border-radius:var(--r);padding:26px;position:relative}
+.mt:before{counter-increment:m;content:"0" counter(m);font-family:Poppins;font-weight:700;font-size:44px;color:var(--o-l);line-height:1;display:block;margin-bottom:10px}
+.mt h3{font-size:18px;margin-bottom:6px}
+.mt p{font-size:15px;color:var(--mu)}
+.facts{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
+.facts span{background:var(--white);border:1px solid var(--line);border-radius:30px;padding:9px 16px;font-size:14px;font-weight:500}
+.bonus{margin-top:22px;display:flex;gap:18px;align-items:center;background:var(--ink);color:#fff;border-radius:var(--r);padding:22px 26px}
+.bonus .gi{font-size:34px}
+.bonus b{font-family:Poppins;font-size:18px}
+.bonus p{color:#B9AFA5;font-size:14.5px;margin-top:2px}
+/* ebook */
+.ebook{background:linear-gradient(180deg,var(--ink) 0%,#1d1611 100%);color:#fff;overflow:hidden}
+.ebook:before{content:"";position:absolute;width:700px;height:700px;border-radius:50%;background:radial-gradient(circle,rgba(217,119,87,.25),transparent 62%);bottom:-300px;left:-250px}
+.ebook .split{position:relative;align-items:start}
+.cover{perspective:1400px;display:flex;justify-content:center;margin:10px 0 28px}
+.cover img{width:min(250px,60vw);height:auto;border-radius:4px 12px 12px 4px;transform:rotateY(-16deg) rotateX(3deg);box-shadow:-18px 30px 60px rgba(0,0,0,.6),0 0 0 1px rgba(217,119,87,.5)}
+.inside{list-style:none;display:flex;flex-direction:column;gap:10px;margin-top:22px}
+.inside li{display:flex;gap:12px;font-size:15.5px;color:#DCD3C9}
+.inside li b{color:#fff}
+.inside li:before{content:"→";color:var(--o);font-weight:700}
+.formbox{background:#fff;color:var(--tx);border-radius:22px;padding:30px 28px;box-shadow:0 30px 70px -20px rgba(0,0,0,.6)}
+.formbox h3{font-size:24px;line-height:1.2}
+.formbox .s{color:var(--mu);font-size:15px;margin:6px 0 10px}
+label{display:block;font-size:14px;font-weight:600;margin:14px 0 6px}
+input,select{width:100%;background:var(--paper);border:1.5px solid var(--line);color:var(--tx);border-radius:12px;padding:13px 15px;font-family:inherit;font-size:16px;outline:none;transition:border .15s,background .15s}
+input:focus,select:focus{border-color:var(--o);background:#fff}
+select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%23B85C3E' stroke-width='3'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 15px center}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.err{color:#C0392B;font-size:12.5px;min-height:16px;margin-top:3px}
+.chk{display:flex;gap:10px;align-items:flex-start;font-size:13px;color:var(--mu);margin-top:12px;cursor:pointer;font-weight:400}
+.chk input{width:19px;height:19px;flex:none;margin-top:2px;accent-color:var(--o)}
+.formbox .btn{width:100%;margin-top:16px;font-size:17px}
+.safe{text-align:center;font-size:12.5px;color:var(--mu);margin-top:10px}
+.ok{display:none;text-align:center;padding:10px 0}
+.ok .big{font-size:48px}
+.ok h3{margin:6px 0}
+.ok .btn{margin-top:12px;width:100%}
+/* sobre */
+.about{display:grid;grid-template-columns:.8fr 1.2fr;gap:56px;align-items:center}
+.about .pic{position:relative}
+.about .pic img{border-radius:24px;aspect-ratio:4/5;object-fit:cover;object-position:center 30%;width:100%}
+.about .pic .sig{position:absolute;bottom:-18px;right:-18px;background:var(--o);color:#fff;border-radius:16px;padding:14px 18px;font-family:Poppins;font-weight:700;font-size:15px;line-height:1.3;box-shadow:0 18px 40px -12px rgba(0,0,0,.4)}
+.about p{color:var(--mu);margin-top:14px}
+.about p b{color:var(--tx)}
+.areas{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}
+.areas span{background:var(--paper2);border-radius:8px;padding:6px 12px;font-size:13.5px;font-weight:500}
+/* faq */
+.faq{max-width:820px;margin:40px auto 0}
+details{background:var(--white);border:1px solid var(--line);border-radius:14px;padding:18px 22px;margin-bottom:10px}
+summary{cursor:pointer;font-weight:600;list-style:none;display:flex;justify-content:space-between;gap:12px;font-size:16.5px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";color:var(--o);font-weight:700;font-size:22px;line-height:1}
+details[open] summary::after{content:"−"}
+details p{color:var(--mu);margin-top:10px;font-size:15.5px}
+/* final */
+.final{text-align:center;background:var(--o);color:#fff;overflow:hidden}
+.final h2{margin:0 auto;color:#fff;max-width:820px}
+.final h2 em{color:var(--ink)}
+.final p{color:#FFE6DC;margin:16px auto 30px;max-width:620px;font-size:18px}
+.final .ctas{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.final .btn-dark{box-shadow:0 12px 28px -10px rgba(0,0,0,.5)}
+.final .btn-ghost{border:1.5px solid rgba(255,255,255,.6);color:#fff}
+footer{background:var(--ink);color:#A79D93;padding:44px 0 110px;font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;align-items:center}
+footer .soc{display:flex;gap:10px}
+footer .soc a{width:42px;height:42px;border-radius:12px;background:var(--ink2);border:1px solid rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center}
+footer a.pp{color:#A79D93}
+/* fixos */
+.fab{position:fixed;right:18px;bottom:18px;width:60px;height:60px;border-radius:50%;background:var(--wa);display:flex;align-items:center;justify-content:center;box-shadow:0 12px 30px rgba(0,0,0,.35);z-index:50}
+.fab svg{width:32px;height:32px}
+.bar{position:fixed;left:0;right:0;bottom:0;padding:12px 90px 12px 14px;background:rgba(18,17,16,.95);backdrop-filter:blur(8px);border-top:1px solid rgba(255,255,255,.08);z-index:40;display:none;transition:transform .25s}
+.bar .btn{width:100%;padding:13px;font-size:15px}
+.bar.hide{transform:translateY(110%)}
+.rv{opacity:0;transform:translateY(22px);transition:opacity .6s,transform .6s}
+.rv.on{opacity:1;transform:none}
+.center{text-align:center}.center h2,.center .sub{margin-left:auto;margin-right:auto}
+@media (max-width:960px){
+  .menu a:not(.btn){display:none}
+  .hero .grid{grid-template-columns:1fr}
+  .hero .photo{max-width:340px;margin:10px auto 0}
+  .f1{left:-6px}.f2{right:-6px}
+  .trust{grid-template-columns:1fr 1fr}.trust div:nth-child(2){border-right:none}.trust div:nth-child(-n+2){border-bottom:1px solid rgba(255,255,255,.08)}
+  .g4,.method,.lost{grid-template-columns:1fr 1fr}
+  .g3{grid-template-columns:1fr}
+  .split,.about{grid-template-columns:1fr;gap:36px}
+  .steps7{grid-template-columns:1fr;gap:14px;text-align:left}
+  .steps7:before{top:0;bottom:0;left:27px;right:auto;width:2px;height:auto;background:linear-gradient(180deg,var(--o),#3FB37F)}
+  .st{display:grid;grid-template-columns:56px 1fr;gap:14px;align-items:center;text-align:left;padding:0}
+  .st i{margin:0}
+  .about .pic{max-width:380px;margin:0 auto}
+  .bar{display:block}
+  section{padding:68px 0}
+}
+@media (max-width:560px){
+  .g4,.method,.lost,.checks,.row2{grid-template-columns:1fr}
+  .hero .ctas .btn,.final .ctas .btn{width:100%}
+  .fn b{font-size:32px;min-width:72px}
+  .fn2{width:92%;margin-left:4%}.fn3{width:84%;margin-left:8%}
+  .menu .btn span{display:none}
+  .about .pic .sig{right:8px}
+}
+@media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<!-- ===== CONFIGURAÇÃO ===== -->
+<script>
+  const CONFIG = {
+    EBOOK_URL: "/ebook/A-Nova-Logica-dos-Negocios.pdf",
+    LEAD_API: "/api/lead",      // envia o lead para o WEBHOOK_URL configurado na Vercel
+    PIXEL_ID: "",               // cole aqui o ID do Meta Pixel (opcional)
+    WHATSAPP: "5562985247013",
+    MSG_DIAGNOSTICO: "Olá Pablio! Vi seu site e quero agendar o diagnóstico gratuito da minha empresa.",
+    MSG_EBOOK: "Olá Pablio! Baixei o ebook A Nova Lógica dos Negócios e quero o diagnóstico gratuito."
+  };
+</script>
+
+<nav>
+  <div class="wrap">
+    <a href="#" class="logo"><i>P</i>Pablio <span>Tavares</span></a>
+    <div class="menu">
+      <a href="#solucoes">Soluções</a>
+      <a href="#disparos">Disparos</a>
+      <a href="#metodo">Como funciona</a>
+      <a href="#ebook">Ebook grátis</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#" class="btn btn-wa wa-diag"><svg viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 1.8a8.2 8.2 0 1 1-4.2 15.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 0 1 12 3.8z"/><path d="M16.5 14.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.9 11.9 0 0 0 4.6 4c1.7.7 2.4.8 3.2.7a2.8 2.8 0 0 0 1.8-1.3 2.3 2.3 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3z"/></svg><span>Falar comigo</span></a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="wrap">
+    <div class="grid">
+      <div style="padding-bottom:20px">
+        <div class="pill"><b></b>Consultoria comercial · Goiânia e online</div>
+        <h1>Sua empresa vendendo mais pelo WhatsApp, com <em>processo, CRM e IA</em>.</h1>
+        <p class="sub">Eu organizo o comercial de pequenas e médias empresas: do primeiro atendimento ao pós venda, com disparos seguros, funil de vendas e inteligência artificial trabalhando 24 horas.</p>
+        <div class="ctas">
+          <a href="#" class="btn btn-o wa-diag">Agendar diagnóstico gratuito →</a>
+          <a href="#ebook" class="btn btn-line">📘 Baixar ebook grátis</a>
+        </div>
+      </div>
+      <div class="photo">
+        <img src="/assets/foto-hero.jpg" alt="Pablio Tavares, consultor comercial" width="430" height="573">
+        <div class="float f1"><b>24h</b><span>IA atendendo<br>no WhatsApp</span></div>
+        <div class="float f2"><b>+5</b><span>anos na gestão<br>comercial</span></div>
+      </div>
+    </div>
+    <div class="trust">
+      <div><b>+5 anos</b><span>na gestão comercial</span></div>
+      <div><b>Desde 2022</b><span>usando inteligência artificial</span></div>
+      <div><b>Vários ramos</b><span>empresas atendidas em Goiânia</span></div>
+      <div><b>Online ou presencial</b><span>com suporte direto pelo WhatsApp</span></div>
+    </div>
+  </div>
+</header>
+
+<!-- PROBLEMAS -->
+<section>
+  <div class="wrap">
+    <div class="eyebrow rv">O diagnóstico</div>
+    <h2 class="rv">Onde as empresas <em>perdem dinheiro</em> todos os dias</h2>
+    <p class="sub rv">Muda o ramo, mas a dor é a mesma. Se você se reconhecer em pelo menos uma, tem venda ficando na mesa.</p>
+    <div class="g4">
+      <div class="prob rv"><div class="n">01</div><h3>Demora no atendimento</h3><p>O cliente pergunta, espera duas horas e compra no concorrente que respondeu primeiro.</p></div>
+      <div class="prob rv"><div class="n">02</div><h3>Orçamento esquecido</h3><p>Proposta enviada, cliente some e ninguém chama de volta. A venda morre no "visualizado".</p></div>
+      <div class="prob rv"><div class="n">03</div><h3>Só venda receptiva</h3><p>A empresa só vende quando o cliente chama. Quando o movimento cai, o caixa sente.</p></div>
+      <div class="prob rv"><div class="n">04</div><h3>Sem pós venda</h3><p>Ninguém sabe quando o cliente vai comprar de novo, e ele acaba esquecendo de você.</p></div>
+    </div>
+    <div class="quote rv"><b>8/10</b><span>Na minha experiência, de cada 10 empresários que eu atendo, 8 chegam com essas mesmas reclamações. <strong>A boa notícia: todas têm solução com processo.</strong></span></div>
+  </div>
+</section>
+
+<!-- SOLUCOES -->
+<section class="dark" id="solucoes">
+  <div class="wrap">
+    <div class="eyebrow rv">Soluções</div>
+    <h2 class="rv">Tudo o que o seu comercial precisa para <em>vender com previsibilidade</em></h2>
+    <p class="sub rv">Cada empresa recebe o que faz sentido para o seu momento. Sem pacote engessado.</p>
+    <div class="g3">
+      <div class="svc hl rv"><span class="tagx">Mais procurado</span><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#D97757" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2 11 13M22 2l-7 20-4-9-9-4z"/></svg></div><h3>Disparos e venda ativa</h3><p>Sua base de clientes gerando venda toda semana, sem gastar com anúncio.</p><ul><li>Base separada por ciclo de compra</li><li>Mensagens personalizadas, nada de spam</li><li>Envio seguro, sem risco de banimento</li></ul></div>
+      <div class="svc rv"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#D97757" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M8 13h3M8 16h6M15 13h1"/></svg></div><h3>CRM e funil de vendas</h3><p>Cada cliente registrado, cada orçamento acompanhado, cada etapa medida.</p><ul><li>Funil com as etapas do seu negócio</li><li>Follow-up que não deixa venda esfriar</li><li>Números para decidir sem achismo</li></ul></div>
+      <div class="svc rv"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#D97757" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="7" width="16" height="12" rx="3"/><path d="M12 3v4M9 12h.01M15 12h.01M9 16h6"/></svg></div><h3>IA no atendimento 24h</h3><p>Um assistente que responde, tira dúvidas e agenda no WhatsApp e no Instagram.</p><ul><li>Treinado com as informações da sua empresa</li><li>Atende de madrugada e no domingo</li><li>Passa para um humano quando precisa</li></ul></div>
+      <div class="svc rv"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#D97757" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20s-7-4.4-9.2-9A5 5 0 0 1 12 6a5 5 0 0 1 9.2 5c-2.2 4.6-9.2 9-9.2 9z"/></svg></div><h3>Relacionamento e pós venda</h3><p>O cliente lembrado na hora certa volta a comprar, e indica.</p><ul><li>Pós venda em até 3 dias</li><li>Pedido de avaliação no Google</li><li>Reativação de clientes sumidos</li></ul></div>
+      <div class="svc rv"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#D97757" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c.8-3.5 3.4-5.5 6.5-5.5s5.7 2 6.5 5.5M16 4.8a3.5 3.5 0 0 1 0 6.4M18 14.8c1.8.7 3 2.5 3.5 5.2"/></svg></div><h3>Treinamento comercial</h3><p>Equipe preparada para atender, contornar objeção e fechar.</p><ul><li>Roteiro de atendimento do seu negócio</li><li>Respostas prontas para objeções</li><li>Acompanhamento contínuo</li></ul></div>
+      <div class="svc rv"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#D97757" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8zM19 16l.8 2.2L22 19l-2.2.8L19 22l-.8-2.2L16 19l2.2-.8z"/></svg></div><h3>IA para a sua gestão</h3><p>Aprenda a usar a IA no dia a dia da empresa, do jeito certo.</p><ul><li>Projetos com o conhecimento da empresa</li><li>Instruções e Skills no seu padrão</li><li>Marketing, vendas e financeiro</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<!-- DISPAROS -->
+<section id="disparos">
+  <div class="wrap split">
+    <div>
+      <div class="eyebrow rv">Disparos de mensagens</div>
+      <h2 class="rv">Sua base de clientes é o seu <em>maior ativo</em></h2>
+      <p class="sub rv">Quem já comprou de você confia em você. Uma mensagem certa, na hora certa, traz venda no mesmo dia e faz o cliente lembrar de você a semana inteira.</p>
+      <div class="warn rv">
+        <h3>⚠️ Cuidado: disparo errado pode banir o seu número</h3>
+        <p>Número sem histórico, mensagem idêntica para todo mundo e envio em massa de uma vez fazem o WhatsApp restringir, suspender ou até banir o seu número. E aí você perde o contato com todos os clientes.</p>
+      </div>
+      <div class="checks rv">
+        <div>Aquecimento do número antes de disparar</div>
+        <div>Base separada por ciclo de compra</div>
+        <div>Mensagens personalizadas com nome e histórico</div>
+        <div>Ritmo de envio seguro e opção de sair</div>
+      </div>
+    </div>
+    <div class="rv">
+      <div class="funnelnum">
+        <div class="fn fn1"><b>100</b><span>mensagens enviadas para a sua base</span></div>
+        <div class="fn fn2"><b>20</b><span>clientes respondem</span></div>
+        <div class="fn fn3"><b>5</b><span>vendas fechadas, sem anúncio</span></div>
+      </div>
+      <p class="small">Média que observo nas empresas que atendo. Varia de acordo com o negócio.</p>
+      <div class="prob" style="margin-top:18px;text-align:center"><span style="color:var(--mu);font-size:14px">Exemplo: base de 600 clientes, ticket de R$ 150</span><div class="ff" style="font-size:34px;font-weight:700;color:var(--o);line-height:1.2;margin-top:4px">R$ 4.500</div><span style="font-size:14px;color:var(--mu)">em uma única ação de mensagens</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- FUNIL -->
+<section class="dark">
+  <div class="wrap">
+    <div class="center">
+      <div class="eyebrow rv">Funil de vendas</div>
+      <h2 class="rv">Do primeiro contato à <em>recorrência</em></h2>
+      <p class="sub rv">Muita empresa acha que o funil acaba na venda. O lucro de verdade está quando o cliente volta sem você pagar anúncio para trazer ele de novo.</p>
+    </div>
+    <div class="steps7">
+      <div class="st rv"><i>1</i><div><b>Entrada</b><span>O cliente chegou</span></div></div>
+      <div class="st rv"><i>2</i><div><b>Atendimento</b><span>Resposta rápida</span></div></div>
+      <div class="st rv"><i>3</i><div><b>Qualificação</b><span>Entender o que ele busca</span></div></div>
+      <div class="st rv"><i>4</i><div><b>Orçamento</b><span>Proposta enviada</span></div></div>
+      <div class="st rv"><i>5</i><div><b>Venda</b><span>Cliente comprou</span></div></div>
+      <div class="st rv"><i>6</i><div><b>Pós venda</b><span>Satisfação em até 3 dias</span></div></div>
+      <div class="st goal rv"><i>7</i><div><b>Recorrência</b><span>Ele volta a comprar</span></div></div>
+    </div>
+    <div class="lost">
+      <div class="rv"><span class="e">💸</span><b>Preço</b><span>Mostre valor antes do preço</span></div>
+      <div class="rv"><span class="e">⏰</span><b>Demora</b><span>Resposta rápida com IA</span></div>
+      <div class="rv"><span class="e">📦</span><b>Produto</b><span>Qualifique antes de oferecer</span></div>
+      <div class="rv"><span class="e">🙈</span><b>Esquecimento</b><span>Follow-up organizado no CRM</span></div>
+    </div>
+    <p class="center rv" style="margin-top:24px;color:#A79D93;font-size:15px">Os 4 motivos que fazem o cliente sumir. <b style="color:#fff">Na maioria das vezes, não é o preço.</b></p>
+  </div>
+</section>
+
+<!-- METODO -->
+<section id="metodo">
+  <div class="wrap">
+    <div class="eyebrow rv">Como funciona</div>
+    <h2 class="rv">Um método simples, <em>aplicado na sua empresa</em></h2>
+    <p class="sub rv">Nada de teoria. Eu entro na sua operação, entendo o seu cliente e implanto junto com a sua equipe.</p>
+    <div class="method">
+      <div class="mt rv"><h3>Diagnóstico gratuito</h3><p>15 minutos para entender o seu negócio e onde estão as maiores perdas.</p></div>
+      <div class="mt rv"><h3>Mapeamento</h3><p>Visita à empresa ou reunião online para mapear atendimento, funil e equipe.</p></div>
+      <div class="mt rv"><h3>Implantação</h3><p>CRM, disparos, IA e pós venda configurados para a sua realidade.</p></div>
+      <div class="mt rv"><h3>Acompanhamento</h3><p>Treinamento contínuo da equipe até tudo estar funcionando de verdade.</p></div>
+    </div>
+    <div class="facts rv">
+      <span>📍 Online ou presencial</span><span>⏱️ No ritmo da sua empresa</span><span>💬 Suporte direto comigo pelo WhatsApp</span><span>🏢 Pequenas e médias empresas</span>
+    </div>
+    <div class="bonus rv"><div class="gi">🎁</div><div><b>Bônus: roteiro de atendimento completo</b><p>Feito para o seu negócio, com sugestões de respostas, contorno de objeções e mensagens de abordagem, follow-up e fechamento.</p></div></div>
+  </div>
+</section>
+
+<!-- EBOOK -->
+<section class="ebook" id="ebook">
+  <div class="wrap split">
+    <div class="rv">
+      <div class="eyebrow">Material gratuito</div>
+      <h2>Comece pelo ebook <em>A Nova Lógica dos Negócios</em></h2>
+      <p class="sub">Inteligência artificial, gestão e vendas para quem quer ir além. Um guia prático, com exercícios para você aplicar hoje.</p>
+      <div class="cover"><img src="/assets/capa.jpg" alt="Capa do ebook A Nova Lógica dos Negócios" width="250" height="354"></div>
+      <ul class="inside">
+        <li><span><b>Raio X do seu negócio:</b> 6 pontos com nota no final</span></li>
+        <li><span><b>Como fazer a IA</b> conhecer a sua empresa</span></li>
+        <li><span><b>A conta do disparo</b> e o ciclo de compra</span></li>
+        <li><span><b>Exemplos prontos</b> para vários ramos</span></li>
+      </ul>
+    </div>
+    <div class="rv">
+      <div class="formbox">
+        <form id="form" novalidate>
+          <h3>Receba o ebook agora</h3>
+          <p class="s">30 páginas · acesso imediato · 100% gratuito</p>
+          <label for="nome">Seu nome</label>
+          <input id="nome" name="nome" autocomplete="given-name" placeholder="Como posso te chamar?">
+          <div class="err" id="e-nome"></div>
+          <label for="whats">WhatsApp com DDD</label>
+          <input id="whats" name="whatsapp" inputmode="numeric" autocomplete="tel" placeholder="(62) 90000-0000">
+          <div class="err" id="e-whats"></div>
+          <div class="row2">
+            <div><label for="ramo">Ramo</label>
+              <select id="ramo" name="ramo"><option value="">Selecione</option><option>Comércio / Loja</option><option>Alimentação</option><option>Clínica ou Consultório</option><option>Estética e Beleza</option><option>Advocacia</option><option>Contabilidade</option><option>Serviços</option><option>Outro</option></select>
+              <div class="err" id="e-ramo"></div></div>
+            <div><label for="perfil">Você é</label>
+              <select id="perfil" name="perfil"><option value="">Selecione</option><option>Dono da empresa</option><option>Gestor ou Vendedor</option><option>Profissional liberal</option><option>Outro</option></select>
+              <div class="err" id="e-perfil"></div></div>
+          </div>
+          <label class="chk"><input type="checkbox" id="lgpd"><span>Aceito receber conteúdos e contato pelo WhatsApp, conforme a <a href="/privacidade.html" target="_blank">política de privacidade</a>.</span></label>
+          <div class="err" id="e-lgpd"></div>
+          <button class="btn btn-o" type="submit" id="send">Quero o ebook gratuito</button>
+          <div class="safe">🔒 Seus dados estão seguros. Sem spam.</div>
+        </form>
+        <div class="ok" id="ok">
+          <div class="big">🎉</div>
+          <h3>Pronto, <span id="okname" style="color:var(--o)">tudo certo</span>!</h3>
+          <p class="s">Seu ebook está liberado.</p>
+          <a class="btn btn-o" id="dl" href="/ebook/A-Nova-Logica-dos-Negocios.pdf" target="_blank" rel="noopener" download>📘 Baixar o ebook (PDF)</a>
+          <p style="margin:18px 0 0;font-size:15px;color:var(--mu)">Faça o Raio X e <b style="color:var(--tx)">me manda a sua nota</b>. Eu faço um diagnóstico gratuito de 15 minutos do seu negócio.</p>
+          <a class="btn btn-wa wa-ebook" href="#" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 1.8a8.2 8.2 0 1 1-4.2 15.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 0 1 12 3.8z"/><path d="M16.5 14.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.9 11.9 0 0 0 4.6 4c1.7.7 2.4.8 3.2.7a2.8 2.8 0 0 0 1.8-1.3 2.3 2.3 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3z"/></svg> Falar com o Pablio</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SOBRE -->
+<section id="sobre">
+  <div class="wrap about">
+    <div class="pic rv">
+      <img src="/assets/foto-hero.jpg" alt="Pablio Tavares" loading="lazy" width="660" height="880">
+      <div class="sig">Pablio Tavares<br><span style="font-weight:500;font-size:13px;opacity:.9">Consultor comercial</span></div>
+    </div>
+    <div class="rv">
+      <div class="eyebrow">Quem sou eu</div>
+      <h2>Prazer, eu sou o <em>Pablio</em></h2>
+      <p>Sou gestor comercial há <b>mais de 5 anos</b> e consultor de CRM, automação e IA aplicada a vendas. Meu dia a dia é atendimento pelo WhatsApp, funil, disparo de mensagens, pós venda e equipe batendo meta.</p>
+      <p>Uso inteligência artificial <b>desde o lançamento, em 2022</b>, e acompanhei de perto cada evolução. Já atendi <b>empresas de vários ramos em Goiânia</b> e percebi que muda o ramo, mas a dor é a mesma. Por isso meu trabalho é prático: entrar na operação, organizar o processo e deixar a equipe vendendo mais.</p>
+      <div class="areas"><span>Alimentação</span><span>Clínicas</span><span>Delivery</span><span>Serviços</span><span>Comércio</span></div>
+      <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:26px">
+        <a href="#" class="btn btn-o wa-diag">Agendar diagnóstico</a>
+        <a href="https://www.instagram.com/pabliotavarescomercial" target="_blank" rel="noopener" class="btn" style="border:1.5px solid var(--line);background:#fff"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#E1306C" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="#E1306C"/></svg> @pabliotavarescomercial</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section style="background:var(--paper2)">
+  <div class="wrap">
+    <div class="center"><div class="eyebrow rv">Dúvidas</div><h2 class="rv">Perguntas <em>frequentes</em></h2></div>
+    <div class="faq rv">
+      <details><summary>Atende apenas em Goiânia?</summary><p>Não. Em Goiânia faço visitas presenciais, e para outras cidades o trabalho é 100% online, com o mesmo acompanhamento.</p></details>
+      <details><summary>Preciso entender de tecnologia?</summary><p>Não. Eu configuro tudo e treino a sua equipe em linguagem simples, passo a passo.</p></details>
+      <details><summary>Disparo de mensagens pode bloquear meu WhatsApp?</summary><p>Pode, se for feito do jeito errado. Por isso o trabalho começa pelo aquecimento do número, separação da base e mensagens personalizadas, com ritmo de envio seguro.</p></details>
+      <details><summary>A IA vai substituir minha equipe?</summary><p>Não. Ela tira o trabalho repetitivo das costas da equipe, como responder sempre as mesmas perguntas, para que as pessoas foquem em vender e atender bem.</p></details>
+      <details><summary>Quanto tempo leva para ver resultado?</summary><p>Depende do ponto de partida da empresa. Ações como mensagens para a base e pós venda costumam trazer retorno logo nas primeiras semanas. O diagnóstico gratuito mostra o que priorizar no seu caso.</p></details>
+      <details><summary>Como funciona o diagnóstico gratuito?</summary><p>É uma conversa de 15 minutos pelo WhatsApp ou chamada, onde eu entendo o seu negócio e te mostro os 2 primeiros ajustes que trariam mais resultado.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL -->
+<section class="final">
+  <div class="wrap">
+    <h2 class="rv">Seu concorrente já está organizando o comercial. <em>E você?</em></h2>
+    <p class="rv">Agende um diagnóstico gratuito de 15 minutos e descubra onde a sua empresa está perdendo vendas.</p>
+    <div class="ctas rv">
+      <a href="#" class="btn btn-dark wa-diag"><svg viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 1.8a8.2 8.2 0 1 1-4.2 15.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 0 1 12 3.8z"/><path d="M16.5 14.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.9 11.9 0 0 0 4.6 4c1.7.7 2.4.8 3.2.7a2.8 2.8 0 0 0 1.8-1.3 2.3 2.3 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3z"/></svg> Agendar diagnóstico gratuito</a>
+      <a href="#ebook" class="btn btn-ghost">📘 Baixar o ebook</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <a href="#" class="logo" style="margin-bottom:8px"><i>P</i>Pablio <span>Tavares</span></a>
+      <div>Gestão comercial, CRM e IA aplicada a vendas · Goiânia, GO</div>
+      <div style="margin-top:4px"><a class="pp" href="/privacidade.html">Política de privacidade</a></div>
+    </div>
+    <div class="soc">
+      <a href="#" class="wa-diag" target="_blank" rel="noopener" aria-label="WhatsApp"><svg width="20" height="20" viewBox="0 0 24 24" fill="#25D366"><path fill-rule="evenodd" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 1.8a8.2 8.2 0 1 1-4.2 15.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 0 1 12 3.8z"/><path d="M16.5 14.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.9 11.9 0 0 0 4.6 4c1.7.7 2.4.8 3.2.7a2.8 2.8 0 0 0 1.8-1.3 2.3 2.3 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3z"/></svg></a>
+      <a href="https://www.instagram.com/pabliotavarescomercial" target="_blank" rel="noopener" aria-label="Instagram"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#E1306C" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="#E1306C"/></svg></a>
+    </div>
+  </div>
+</footer>
+
+<a class="fab wa-diag" href="#" target="_blank" rel="noopener" aria-label="Falar no WhatsApp"><svg viewBox="0 0 24 24" fill="#fff"><path fill-rule="evenodd" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 1.8a8.2 8.2 0 1 1-4.2 15.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 0 1 12 3.8z"/><path d="M16.5 14.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.9 11.9 0 0 0 4.6 4c1.7.7 2.4.8 3.2.7a2.8 2.8 0 0 0 1.8-1.3 2.3 2.3 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3z"/></svg></a>
+<div class="bar" id="bar"><a href="#" class="btn btn-o wa-diag">Agendar diagnóstico gratuito</a></div>
+
+<script>
+(function(){
+  const wa = m => "https://wa.me/" + CONFIG.WHATSAPP + "?text=" + encodeURIComponent(m);
+  document.querySelectorAll(".wa-diag").forEach(a => { a.href = wa(CONFIG.MSG_DIAGNOSTICO); a.target = "_blank"; a.rel = "noopener"; });
+  document.querySelectorAll(".wa-ebook").forEach(a => a.href = wa(CONFIG.MSG_EBOOK));
+  document.getElementById("dl").href = CONFIG.EBOOK_URL;
+
+  if (CONFIG.PIXEL_ID) {
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', CONFIG.PIXEL_ID); fbq('track', 'PageView');
+    document.querySelectorAll(".wa-diag").forEach(a => a.addEventListener("click", () => fbq('track', 'Contact')));
+  }
+
+  const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add("on"); io.unobserve(e.target); } }), {threshold:.1});
+  document.querySelectorAll(".rv").forEach(el => io.observe(el));
+
+  const bar = document.getElementById("bar");
+  const hero = document.querySelector(".hero"), eb = document.getElementById("ebook");
+  let heroVis = true, ebVis = false;
+  const upd = () => bar.classList.toggle("hide", heroVis || ebVis);
+  new IntersectionObserver(es => { heroVis = es[0].isIntersecting; upd(); }, {threshold:.15}).observe(hero);
+  new IntersectionObserver(es => { ebVis = es[0].isIntersecting; upd(); }, {threshold:.1}).observe(eb);
+  upd();
+
+  const w = document.getElementById("whats");
+  w.addEventListener("input", () => {
+    let d = w.value.replace(/\D/g, "").slice(0, 11), o = "";
+    if (d.length > 0) o = "(" + d.slice(0, 2);
+    if (d.length >= 3) o += ") " + d.slice(2, d.length > 10 ? 7 : 6);
+    if (d.length >= 7) o += "-" + d.slice(d.length > 10 ? 7 : 6);
+    w.value = o;
+  });
+
+  const f = document.getElementById("form");
+  const setErr = (id, m) => document.getElementById("e-" + id).textContent = m || "";
+  f.addEventListener("submit", async ev => {
+    ev.preventDefault();
+    const nome = f.nome.value.trim(), tel = w.value.replace(/\D/g, ""), ramo = f.ramo.value, perfil = f.perfil.value, ok = document.getElementById("lgpd").checked;
+    let bad = false;
+    setErr("nome", nome.length < 2 ? (bad = true, "Digite seu nome.") : "");
+    setErr("whats", (tel.length < 10 || tel.length > 11) ? (bad = true, "Digite um WhatsApp válido com DDD.") : "");
+    setErr("ramo", !ramo ? (bad = true, "Selecione o ramo.") : "");
+    setErr("perfil", !perfil ? (bad = true, "Selecione uma opção.") : "");
+    setErr("lgpd", !ok ? (bad = true, "Marque para receber o ebook.") : "");
+    if (bad) return;
+    const btn = document.getElementById("send"); btn.disabled = true; btn.textContent = "Liberando seu ebook...";
+    const lead = { nome, whatsapp: "55" + tel, ramo, perfil, origem: "Site · Ebook A Nova Lógica dos Negócios", pagina: location.href, data: new Date().toISOString() };
+    try {
+      await Promise.race([
+        fetch(CONFIG.LEAD_API, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(lead) }),
+        new Promise(r => setTimeout(r, 4000))
+      ]);
+    } catch (e) {}
+    if (window.fbq) fbq('track', 'Lead');
+    document.getElementById("okname").textContent = nome.split(" ")[0];
+    f.style.display = "none";
+    document.getElementById("ok").style.display = "block";
+  });
+})();
+</script>
+</body>
+</html>
