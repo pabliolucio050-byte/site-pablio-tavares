@@ -1,0 +1,454 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Implantação de CRM Kommo | Pablio Tavares</title>
+<meta name="description" content="Implantação de CRM Kommo: clientes em um só lugar, vários atendentes no mesmo WhatsApp, dashboard de atendimento, funil de vendas e disparos organizados. Presencial e online, de Goiânia para todo o Brasil.">
+<meta property="og:title" content="Implantação de CRM Kommo | Pablio Tavares">
+<meta property="og:description" content="Seu comercial organizado. Nenhum cliente esquecido. Nenhuma venda perdida.">
+<meta property="og:image" content="/assets/og.jpg">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#121110">
+<style>
+@font-face{font-family:Poppins;src:url(/assets/Poppins-Bold.ttf);font-weight:700;font-display:swap}
+@font-face{font-family:Poppins;src:url(/assets/Poppins-Medium.ttf);font-weight:500;font-display:swap}
+@font-face{font-family:Inter;src:url(/assets/Inter-Regular.otf);font-weight:400;font-display:swap}
+@font-face{font-family:Inter;src:url(/assets/Inter-Medium.otf);font-weight:500;font-display:swap}
+@font-face{font-family:Inter;src:url(/assets/Inter-SemiBold.otf);font-weight:600;font-display:swap}
+:root{--ink:#121110;--ink2:#1C1A18;--ink3:#2A2724;--paper:#F6F2EC;--paper2:#ECE5DB;--white:#FFFFFF;--o:#D97757;--o-d:#B85C3E;--o-l:#F3D5C7;--tx:#1D1B19;--mu:#6B635B;--mu-d:#A79D93;--line:#E2D9CD;--wa:#25D366;--wa-d:#063D20;--r:18px}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;overflow-x:hidden}
+body{font-family:Inter,system-ui,sans-serif;color:var(--tx);background:var(--paper);line-height:1.6;font-size:16.5px;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+h1,h2,h3,.ff{font-family:Poppins,Inter,sans-serif}
+a{color:inherit}
+.wrap{max-width:1140px;margin:0 auto;padding:0 22px}
+section{padding:92px 0;position:relative}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:12.5px;font-weight:600;letter-spacing:2.5px;text-transform:uppercase;color:var(--o-d);margin-bottom:14px}
+.eyebrow:before{content:"";width:22px;height:2px;background:var(--o)}
+h2{font-size:clamp(28px,4.4vw,44px);line-height:1.12;font-weight:700;letter-spacing:-.6px;max-width:780px}
+h2 em,h1 em{font-style:normal;color:var(--o)}
+.sub{color:var(--mu);font-size:clamp(16px,2vw,18.5px);max-width:660px;margin-top:14px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border:none;cursor:pointer;font-family:Inter,sans-serif;font-weight:600;font-size:16px;border-radius:12px;padding:15px 24px;text-decoration:none;transition:transform .15s,box-shadow .15s,background .15s;white-space:nowrap}
+.btn:hover{transform:translateY(-2px)}
+.btn-o{background:var(--o);color:#fff;box-shadow:0 12px 28px -10px rgba(217,119,87,.7)}
+.btn-o:hover{background:var(--o-d)}
+.btn-wa{background:var(--wa);color:var(--wa-d);box-shadow:0 12px 28px -10px rgba(37,211,102,.6)}
+.btn-line{border:1.5px solid rgba(255,255,255,.25);color:#fff;background:rgba(255,255,255,.04)}
+.btn-dark{background:var(--ink);color:#fff;box-shadow:0 12px 28px -10px rgba(0,0,0,.5)}
+.btn-ghost{border:1.5px solid rgba(255,255,255,.6);color:#fff}
+.btn-out{border:1.5px solid var(--line);background:#fff;color:var(--tx)}
+.btn svg{width:20px;height:20px}
+.dark{background:var(--ink);color:#EFE9E2}
+.dark .sub{color:var(--mu-d)}
+.dark .eyebrow{color:var(--o)}
+.center{text-align:center}.center h2,.center .sub{margin-left:auto;margin-right:auto}
+nav{position:sticky;top:0;z-index:60;background:rgba(18,17,16,.86);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,.06)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:68px}
+.logo{display:flex;align-items:center;gap:10px;color:#fff;text-decoration:none;font-family:Poppins;font-weight:700;font-size:17px}
+.logo i{width:34px;height:34px;border-radius:10px;background:var(--o);display:flex;align-items:center;justify-content:center;font-style:normal;font-size:15px}
+.logo span{color:var(--o)}
+.menu{display:flex;gap:28px;align-items:center}
+.menu a{color:#CFC6BC;text-decoration:none;font-size:14.5px;font-weight:500}
+.menu a:hover{color:#fff}
+.menu .btn{padding:10px 16px;font-size:14px;color:var(--wa-d)}
+.hero{background:var(--ink);color:#fff;padding:70px 0 84px;overflow:hidden;position:relative}
+.hero:before{content:"";position:absolute;width:900px;height:900px;border-radius:50%;background:radial-gradient(circle,rgba(217,119,87,.22),transparent 62%);top:-420px;right:-300px}
+.hero .grid{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center;position:relative}
+.pill{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:30px;padding:7px 14px;font-size:13px;color:#DCD3C9;margin-bottom:22px}
+.pill b{width:8px;height:8px;border-radius:50%;background:var(--wa);box-shadow:0 0 0 4px rgba(37,211,102,.2)}
+.hero h1{font-size:clamp(34px,5vw,56px);line-height:1.07;font-weight:700;letter-spacing:-1.2px}
+.hero .sub{color:#B9AFA5;margin:22px 0 32px;font-size:clamp(16.5px,2vw,19px)}
+.ctas{display:flex;gap:12px;flex-wrap:wrap}
+.dash{background:var(--ink2);border:1px solid rgba(255,255,255,.09);border-radius:22px;padding:22px;box-shadow:0 30px 60px -20px rgba(0,0,0,.6)}
+.dash .hd{display:flex;justify-content:space-between;align-items:center;font-size:13px;color:#A79D93;margin-bottom:16px}
+.dash .hd b{color:#fff;font-family:Poppins;font-weight:500;font-size:15px}
+.live{display:inline-flex;align-items:center;gap:6px;font-size:12px;color:#7FE0A7}
+.live:before{content:"";width:7px;height:7px;border-radius:50%;background:var(--wa);box-shadow:0 0 0 3px rgba(37,211,102,.2)}
+.kpis{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.kpi{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);border-radius:14px;padding:14px}
+.kpi b{display:block;font-family:Poppins;font-size:26px;color:#fff;line-height:1.15}
+.kpi span{font-size:12.5px;color:#A79D93}
+.kpi.ok b{color:#7FE0A7}
+.bars{margin-top:16px;display:flex;flex-direction:column;gap:10px}
+.bars p{font-size:12.5px;color:#A79D93;margin-bottom:2px}
+.barr{display:grid;grid-template-columns:62px 1fr 26px;gap:10px;align-items:center;font-size:12.5px;color:#CFC6BC}
+.barr i{height:8px;border-radius:6px;background:rgba(255,255,255,.08);position:relative;overflow:hidden}
+.barr i:after{content:"";position:absolute;top:0;bottom:0;left:0;width:var(--w);background:linear-gradient(90deg,var(--o),#F0A27F);border-radius:6px}
+.dnote{font-size:11.5px;color:#7A7068;text-align:center;margin-top:10px}
+.g4{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:44px}
+.prob{background:var(--white);border:1px solid var(--line);border-radius:var(--r);padding:22px}
+.prob .n{font-family:Poppins;font-weight:700;font-size:13px;color:var(--o);letter-spacing:1px}
+.prob h3{font-size:17px;margin:8px 0 6px;line-height:1.3}
+.prob p{color:var(--mu);font-size:14.5px}
+.quote{margin-top:28px;display:flex;gap:16px;align-items:center;background:var(--ink);color:#fff;border-radius:var(--r);padding:20px 24px;font-size:17px}
+.quote b{font-size:28px}
+.svc{background:var(--ink2);border:1px solid rgba(255,255,255,.07);border-radius:var(--r);padding:24px;transition:border .2s,transform .2s;position:relative}
+.svc:hover{border-color:rgba(217,119,87,.6);transform:translateY(-4px)}
+.svc .ic{width:48px;height:48px;border-radius:13px;background:rgba(217,119,87,.14);border:1px solid rgba(217,119,87,.35);display:flex;align-items:center;justify-content:center;margin-bottom:16px}
+.svc .ic svg{width:24px;height:24px;stroke:var(--o);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.svc h3{font-size:17.5px;color:#fff;margin-bottom:8px;line-height:1.3}
+.svc p{color:#A79D93;font-size:14.5px}
+.svc.hl{background:linear-gradient(160deg,rgba(217,119,87,.22),var(--ink2) 60%);border-color:rgba(217,119,87,.5)}
+.tagx{position:absolute;top:16px;right:16px;background:var(--o);color:#fff;font-size:11px;font-weight:600;border-radius:20px;padding:4px 10px;letter-spacing:.5px}
+.method{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:44px;counter-reset:m}
+.mt{background:var(--white);border:1px solid var(--line);border-radius:var(--r);padding:26px}
+.mt:before{counter-increment:m;content:"0" counter(m);font-family:Poppins;font-weight:700;font-size:44px;color:var(--o-l);line-height:1;display:block;margin-bottom:10px}
+.mt h3{font-size:18px;margin-bottom:6px}
+.mt p{font-size:15px;color:var(--mu)}
+.facts{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
+.facts span{background:var(--white);border:1px solid var(--line);border-radius:30px;padding:9px 16px;font-size:14px;font-weight:500}
+.center .facts{justify-content:center}
+.plans{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:50px;align-items:stretch}
+.plan{background:#fff;border:1px solid var(--line);border-radius:22px;padding:30px 26px;display:flex;flex-direction:column;position:relative}
+.plan.hl{background:var(--ink);color:#EFE9E2;border:1.5px solid var(--o);box-shadow:0 30px 60px -25px rgba(217,119,87,.65);transform:translateY(-10px)}
+.plan h3{font-size:14px;letter-spacing:2.5px;text-transform:uppercase;color:var(--o-d)}
+.plan.hl h3{color:var(--o)}
+.plan .tg{font-size:14.5px;color:var(--mu);margin:6px 0 20px;min-height:46px}
+.plan.hl .tg{color:#A79D93}
+.price{font-family:Poppins;font-weight:700;font-size:42px;line-height:1;letter-spacing:-1px}
+.price small{font-size:17px;font-weight:500;margin-right:4px;letter-spacing:0}
+.plan.hl .price{color:#fff}
+.pnote{font-size:13px;color:var(--mu);margin-top:10px;padding-bottom:18px;border-bottom:1px solid var(--line)}
+.plan.hl .pnote{color:#A79D93;border-color:rgba(255,255,255,.12)}
+.plan ul{list-style:none;display:flex;flex-direction:column;gap:9px;margin:18px 0 20px;flex:1}
+.plan li{font-size:14.5px;padding-left:24px;position:relative}
+.plan li:before{content:"";position:absolute;left:1px;top:7px;width:12px;height:7px;border-left:2px solid var(--o);border-bottom:2px solid var(--o);transform:rotate(-45deg)}
+.plan li b{font-weight:600}
+.deliv{display:inline-flex;align-items:center;gap:8px;font-size:13.5px;font-weight:600;color:var(--o-d);background:#FBEDE6;border-radius:30px;padding:6px 12px;align-self:flex-start;margin-bottom:10px}
+.plan.hl .deliv{background:rgba(217,119,87,.16);color:#F0A27F}
+.req{font-size:12.5px;color:var(--mu);margin-bottom:14px}
+.plan .btn{width:100%;margin-top:6px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:36px}
+.part{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:24px;display:flex;gap:16px;align-items:flex-start}
+.part .nn{font-family:Poppins;font-weight:700;font-size:30px;color:var(--o);line-height:1}
+.part h3{font-size:18px;margin-bottom:4px}
+.part p{font-size:15px;color:var(--mu)}
+.lic{width:100%;border-collapse:separate;border-spacing:0;background:#fff;border:1px solid var(--line);border-radius:18px;overflow:hidden;margin-top:22px}
+.lic th,.lic td{padding:16px 20px;text-align:left;font-size:15px;border-bottom:1px solid var(--line)}
+.lic th{background:var(--ink);color:#fff;font-family:Poppins;font-weight:500;font-size:14px}
+.lic tr:last-child td{border-bottom:none}
+.lic td.pl{font-family:Poppins;font-weight:700}
+.lic td.v{font-family:Poppins;font-weight:700;color:var(--o-d);white-space:nowrap}
+.lic td.v small{font-family:Inter;font-weight:400;color:var(--mu);font-size:13px}
+.ex{margin-top:18px;display:flex;gap:16px;align-items:center;background:var(--o-l);border-radius:var(--r);padding:18px 22px;font-size:15.5px}
+.ex b.big{font-family:Poppins;font-size:26px;color:var(--o-d);white-space:nowrap}
+.fine{font-size:13.5px;color:var(--mu);margin-top:14px}
+.mp{font-family:Poppins;font-weight:700;font-size:32px;color:#fff;line-height:1.1;margin:4px 0 12px}
+.mp small{font-size:15px;font-weight:500;color:#A79D93}
+.svc ul{list-style:none;display:flex;flex-direction:column;gap:8px;margin-top:6px}
+.svc li{font-size:14.5px;color:#D6CDC3;padding-left:22px;position:relative}
+.svc li:before{content:"";position:absolute;left:0;top:7px;width:12px;height:7px;border-left:2px solid var(--o);border-bottom:2px solid var(--o);transform:rotate(-45deg)}
+.g3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:44px}
+.faq{max-width:820px;margin:40px auto 0}
+details{background:var(--white);border:1px solid var(--line);border-radius:14px;padding:18px 22px;margin-bottom:10px}
+summary{cursor:pointer;font-weight:600;list-style:none;display:flex;justify-content:space-between;gap:12px;font-size:16.5px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";color:var(--o);font-weight:700;font-size:22px;line-height:1}
+details[open] summary::after{content:"\2212"}
+details p{color:var(--mu);margin-top:10px;font-size:15.5px}
+.final{text-align:center;background:var(--o);color:#fff;overflow:hidden}
+.final h2{margin:0 auto;color:#fff;max-width:820px}
+.final h2 em{color:var(--ink)}
+.final p{color:#FFE6DC;margin:16px auto 30px;max-width:620px;font-size:18px}
+.final .ctas{justify-content:center}
+footer{background:var(--ink);color:#A79D93;padding:44px 0 110px;font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;align-items:center}
+footer a.pp{color:#A79D93}
+.fab{position:fixed;right:18px;bottom:18px;width:60px;height:60px;border-radius:50%;background:var(--wa);display:flex;align-items:center;justify-content:center;box-shadow:0 12px 30px rgba(0,0,0,.35);z-index:50;color:#fff}
+.fab svg{width:32px;height:32px}
+.bar{position:fixed;left:0;right:0;bottom:0;padding:12px 90px 12px 14px;background:rgba(18,17,16,.95);backdrop-filter:blur(8px);border-top:1px solid rgba(255,255,255,.08);z-index:40;display:none;transition:transform .25s}
+.bar .btn{width:100%;padding:13px;font-size:15px}
+.bar.hide{transform:translateY(110%)}
+.rv{opacity:0;transform:translateY(22px);transition:opacity .6s,transform .6s}
+.rv.on{opacity:1;transform:none}
+@media (max-width:960px){
+.menu a:not(.btn){display:none}
+.hero .grid,.two{grid-template-columns:1fr}
+.dash{max-width:440px;width:100%;margin:0 auto}
+.g4,.method{grid-template-columns:1fr 1fr}
+.g3,.plans{grid-template-columns:1fr}
+.plan.hl{transform:none;order:-1}
+.plan .tg{min-height:0}
+.bar{display:block}
+section{padding:68px 0}
+}
+@media (max-width:560px){
+.g4,.method{grid-template-columns:1fr}
+.ctas .btn{width:100%}
+.menu .btn span{display:none}
+.lic th,.lic td{padding:12px 12px;font-size:13.5px}
+.ex{flex-direction:column;align-items:flex-start;gap:4px}
+.quote{flex-direction:column;align-items:flex-start;gap:6px}
+}
+@media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<svg style="display:none" aria-hidden="true"><symbol id="wa" viewBox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 1.8a8.2 8.2 0 1 1-4.2 15.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 0 1 12 3.8z"/><path fill="currentColor" d="M16.5 14.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.9 11.9 0 0 0 4.6 4c1.7.7 2.4.8 3.2.7a2.8 2.8 0 0 0 1.8-1.3 2.3 2.3 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3z"/></symbol></svg>
+
+<script>
+const CONFIG = {
+WHATSAPP: "5562985247013",
+MSG_CRM: "Olá Pablio! Vi a página de implantação de CRM e quero agendar o diagnóstico gratuito da minha empresa."
+};
+</script>
+
+<nav>
+<div class="wrap">
+<a href="/" class="logo"><i>P</i>Pablio <span>Tavares</span></a>
+<div class="menu">
+<a href="/">Início</a>
+<a href="#solucao">O que muda</a>
+<a href="#planos">Planos</a>
+<a href="#licenca">Licença</a>
+<a href="#duvidas">Dúvidas</a>
+<a href="#" class="btn btn-wa wa"><svg><use href="#wa"/></svg><span>Falar comigo</span></a>
+</div>
+</div>
+</nav>
+
+<header class="hero">
+<div class="wrap">
+<div class="grid">
+<div>
+<div class="pill"><b></b>Implantação de CRM Kommo · Parceiro oficial</div>
+<h1>Seu comercial organizado. Nenhum cliente esquecido. <em>Nenhuma venda perdida.</em></h1>
+<p class="sub">Eu implanto o CRM Kommo na sua empresa e transformo o seu WhatsApp em uma máquina de vendas: clientes guardados em um só lugar, cada vendedor com o seu acesso, disparos organizados e todos os números do seu atendimento na palma da sua mão.</p>
+<div class="ctas">
+<a href="#" class="btn btn-o wa">Quero organizar meu comercial →</a>
+<a href="#planos" class="btn btn-line">Ver planos e valores</a>
+</div>
+</div>
+<div class="rv">
+<div class="dash">
+<div class="hd"><b>Atendimento de hoje</b><span class="live">ao vivo</span></div>
+<div class="kpis">
+<div class="kpi"><b>48</b><span>clientes atendidos</span></div>
+<div class="kpi ok"><b>3 min</b><span>tempo médio de resposta</span></div>
+<div class="kpi"><b>12</b><span>orçamentos enviados</span></div>
+<div class="kpi ok"><b>9</b><span>vendas fechadas</span></div>
+</div>
+<div class="bars">
+<p>Atendimentos por vendedor</p>
+<div class="barr"><span>Ana</span><i style="--w:92%"></i><span>19</span></div>
+<div class="barr"><span>Bruno</span><i style="--w:70%"></i><span>15</span></div>
+<div class="barr"><span>Carla</span><i style="--w:62%"></i><span>14</span></div>
+</div>
+</div>
+<p class="dnote">Exemplo ilustrativo do dashboard no CRM</p>
+</div>
+</div>
+</div>
+</header>
+
+<section>
+<div class="wrap">
+<div class="eyebrow rv">O problema</div>
+<h2 class="rv">Seu WhatsApp virou uma <em>bagunça</em>?</h2>
+<p class="sub rv">Se você se identificar com pelo menos uma, a sua empresa está perdendo dinheiro todos os dias.</p>
+<div class="g4">
+<div class="prob rv"><div class="n">01</div><h3>Vendas bagunçadas</h3><p>Ninguém sabe em que pé está cada venda, e orçamento enviado fica sem retorno.</p></div>
+<div class="prob rv"><div class="n">02</div><h3>Memória cheia</h3><p>O celular trava, você apaga conversas e perde junto todo o histórico do cliente.</p></div>
+<div class="prob rv"><div class="n">03</div><h3>Vários atendentes, um WhatsApp</h3><p>Ninguém sabe quem falou o quê. Deu problema, não tem como rastrear.</p></div>
+<div class="prob rv"><div class="n">04</div><h3>Zero controle do atendimento</h3><p>Quantos clientes chamaram hoje? Quantos cada atendente atendeu? Quanto tempo o cliente esperou? Ninguém sabe.</p></div>
+<div class="prob rv"><div class="n">05</div><h3>Mensagem esquecida</h3><p>No meio de centenas de conversas, o cliente fica sem resposta e compra no concorrente.</p></div>
+<div class="prob rv"><div class="n">06</div><h3>Clientes no celular do vendedor</h3><p>Quando ele sai da empresa, os clientes vão junto.</p></div>
+<div class="prob rv"><div class="n">07</div><h3>Disparo no escuro</h3><p>A mesma mensagem vai para o mesmo cliente várias vezes, até ele silenciar ou bloquear o seu número.</p></div>
+<div class="prob rv"><div class="n">08</div><h3>Você não conhece o seu cliente</h3><p>Quanto ele gasta, de quanto em quanto tempo compra, quando foi a última compra? Não dá para saber.</p></div>
+</div>
+<div class="quote rv"><b>💡</b><span>O problema não é a sua equipe. <strong>É a falta de um sistema.</strong></span></div>
+</div>
+</section>
+
+<section class="dark" id="solucao">
+<div class="wrap">
+<div class="eyebrow rv">A solução</div>
+<h2 class="rv">O <em>cérebro comercial</em> da sua empresa</h2>
+<p class="sub rv">O CRM guarda cada cliente, cada conversa e cada venda. E não esquece de nada.</p>
+<div class="g4">
+<div class="svc rv"><div class="ic"><svg viewBox="0 0 24 24"><path d="M4 7c0-1.7 3.6-3 8-3s8 1.3 8 3-3.6 3-8 3-8-1.3-8-3zM4 7v10c0 1.7 3.6 3 8 3s8-1.3 8-3V7M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"/></svg></div><h3>Clientes em um só lugar, salvos para sempre</h3><p>WhatsApp, Instagram e site na mesma tela. Conversas guardadas na nuvem, não no celular: chega de memória cheia e histórico perdido.</p></div>
+<div class="svc rv"><div class="ic"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c.8-3.5 3.4-5.5 6.5-5.5s5.7 2 6.5 5.5M16 4.8a3.5 3.5 0 0 1 0 6.4M18 14.8c1.8.7 3 2.5 3.5 5.2"/></svg></div><h3>Cada vendedor com o seu acesso</h3><p>Vários atendentes no mesmo número, cada um com o seu login e os seus clientes. Tudo rastreado: quem respondeu, o quê e quando.</p></div>
+<div class="svc hl rv"><span class="tagx">Controle total</span><div class="ic"><svg viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></div><h3>Dashboard na palma da mão</h3><p>Total de atendimentos do dia, quantos clientes cada atendente atendeu, tempo de resposta e vendas por vendedor. Em tempo real, no celular ou no computador.</p></div>
+<div class="svc rv"><div class="ic"><svg viewBox="0 0 24 24"><path d="M3 4h18l-7 8v6l-4 2v-8z"/></svg></div><h3>Funil de vendas com follow-up</h3><p>Você vê em que etapa está cada cliente e onde a venda trava. E o sistema avisa a equipe na hora de chamar o cliente de novo.</p></div>
+<div class="svc rv"><div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c1-4 4.2-6 8-6s7 2 8 6"/></svg></div><h3>Conheça cada cliente de verdade</h3><p>Histórico de compras, ticket médio, frequência e última compra. Você sabe quem são os melhores, quem sumiu e quem está na hora de comprar de novo.</p></div>
+<div class="svc rv"><div class="ic"><svg viewBox="0 0 24 24"><path d="M22 2 11 13M22 2l-7 20-4-9-9-4z"/></svg></div><h3>Venda ativa organizada</h3><p>Clientes separados por perfil e ciclo de compra. Mensagem certa, no momento certo, sem repetição e sem risco de bloquear o seu número.</p></div>
+<div class="svc rv"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 20s-7-4.4-9.2-9A5 5 0 0 1 12 6a5 5 0 0 1 9.2 5c-2.2 4.6-9.2 9-9.2 9z"/></svg></div><h3>Pós venda e recorrência</h3><p>Mensagem depois da compra, pedido de avaliação no Google e lembrete para o cliente voltar.</p></div>
+<div class="svc rv"><div class="ic"><svg viewBox="0 0 24 24"><rect x="4" y="7" width="16" height="12" rx="3"/><path d="M12 3v4M9 12h.01M15 12h.01M9 16h6"/></svg></div><h3>IA atendendo 24 horas</h3><p>Assistente treinado com as informações da sua empresa, que responde, tira dúvidas e passa para um vendedor na hora certa. <b style="color:#F0A27F">No plano Completo.</b></p></div>
+</div>
+</div>
+</section>
+
+<section>
+<div class="wrap">
+<div class="eyebrow rv">Como funciona</div>
+<h2 class="rv">Implantação feita <em>junto com a sua equipe</em></h2>
+<p class="sub rv">Nada de sistema entregue e abandonado. Eu entro na sua operação e só saio quando tudo está funcionando.</p>
+<div class="method">
+<div class="mt rv"><h3>Diagnóstico gratuito</h3><p>Reunião de pelo menos 30 minutos para entender o seu negócio e o seu processo de vendas.</p></div>
+<div class="mt rv"><h3>Configuração</h3><p>Monto o CRM com as etapas, mensagens e automações da sua empresa.</p></div>
+<div class="mt rv"><h3>Treinamento</h3><p>A sua equipe aprende a usar no dia a dia, sem complicação.</p></div>
+<div class="mt rv"><h3>Acompanhamento</h3><p>Fico junto até tudo estar funcionando de verdade.</p></div>
+</div>
+<div class="facts rv"><span>📍 Presencial em Goiânia e em todo o Brasil, ou online</span><span>🤝 Parceiro oficial Kommo</span><span>💬 Suporte direto comigo pelo WhatsApp</span></div>
+</div>
+</section>
+
+<section style="background:var(--paper2)" id="planos">
+<div class="wrap">
+<div class="center">
+<div class="eyebrow rv">Planos de implantação</div>
+<h2 class="rv">Escolha o plano para o <em>momento da sua empresa</em></h2>
+<p class="sub rv">Pagamento único pela implantação. A licença do CRM é à parte e está explicada logo abaixo.</p>
+</div>
+<div class="plans">
+<div class="plan rv">
+<h3>Essencial</h3>
+<p class="tg">Para quem está começando a organizar o comercial.</p>
+<div class="price"><small>R$</small>1.997</div>
+<p class="pnote">pagamento único + licença do CRM</p>
+<ul>
+<li>CRM configurado com até 3 usuários</li>
+<li>1 funil de vendas com as etapas do seu negócio</li>
+<li>WhatsApp e Instagram conectados</li>
+<li>Clientes organizados com campos e etiquetas</li>
+<li>Mensagens prontas para o atendimento</li>
+<li>1 treinamento com a equipe</li>
+<li>30 dias de suporte pelo WhatsApp</li>
+</ul>
+<span class="deliv">⏱️ Entrega em até 7 dias</span>
+<a href="#" class="btn btn-out wa" data-msg="Olá Pablio! Tenho interesse no plano Essencial de implantação de CRM.">Quero o Essencial</a>
+</div>
+<div class="plan hl rv">
+<span class="tagx">⭐ Mais escolhido</span>
+<h3>Profissional</h3>
+<p class="tg">Para quem quer vender com processo e não perder nenhuma venda.</p>
+<div class="price"><small>R$</small>3.497</div>
+<p class="pnote">pagamento único + licença do CRM</p>
+<ul>
+<li><b>Tudo do Essencial</b>, com até 10 usuários</li>
+<li>Até 3 funis: vendas, pós venda e reativação</li>
+<li>Dashboard de atendimento e vendas</li>
+<li>Separação dos clientes por perfil e ciclo de compra</li>
+<li>Follow-up e pós venda automáticos</li>
+<li>Roteiro de atendimento e respostas para objeções</li>
+<li>2 treinamentos com a equipe</li>
+<li>60 dias de acompanhamento</li>
+</ul>
+<span class="deliv">⏱️ Entrega em até 15 dias</span>
+<a href="#" class="btn btn-o wa" data-msg="Olá Pablio! Tenho interesse no plano Profissional de implantação de CRM.">Quero o Profissional</a>
+</div>
+<div class="plan rv">
+<h3>Completo com IA</h3>
+<p class="tg">Para quem quer o comercial funcionando 24 horas.</p>
+<div class="price"><small>R$</small>5.997</div>
+<p class="pnote">pagamento único + licença do CRM</p>
+<ul>
+<li><b>Tudo do Profissional</b></li>
+<li>Agente de IA no WhatsApp e no Instagram, treinado com a sua empresa</li>
+<li>Estratégia de disparos por ciclo de compra, com envio seguro</li>
+<li>Integrações com site, formulários e planilhas</li>
+<li>Treinamentos ilimitados durante o período</li>
+<li>90 dias de acompanhamento</li>
+</ul>
+<span class="deliv">⏱️ Entrega em até 30 dias</span>
+<p class="req">Requer o plano Avançado do Kommo.</p>
+<a href="#" class="btn btn-out wa" data-msg="Olá Pablio! Tenho interesse no plano Completo com IA de implantação de CRM.">Quero o Completo</a>
+</div>
+</div>
+<div class="center"><div class="facts rv"><span>💳 50% na assinatura e 50% na entrega, ou em até 6x no cartão</span><span>⚡ 5% de desconto à vista no Pix</span><span>✈️ Fora de Goiânia: deslocamento e hospedagem por conta do cliente</span></div></div>
+</div>
+</section>
+
+<section id="licenca">
+<div class="wrap">
+<div class="eyebrow rv">Transparência total</div>
+<h2 class="rv">Quanto custa o <em>CRM Kommo</em></h2>
+<p class="sub rv">Você conhece o investimento completo antes da nossa conversa. Ele tem duas partes:</p>
+<div class="two">
+<div class="part rv"><span class="nn">1</span><div><h3>Implantação (o meu trabalho)</h3><p>Valor único, conforme o plano escolhido acima.</p></div></div>
+<div class="part rv"><span class="nn">2</span><div><h3>Licença do CRM Kommo (o sistema)</h3><p>Mensalidade por usuário, enquanto a empresa usar.</p></div></div>
+</div>
+<div class="rv">
+<table class="lic">
+<thead><tr><th>Plano Kommo</th><th>Por usuário/mês</th><th>Indicado para</th></tr></thead>
+<tbody>
+<tr><td class="pl">Básico</td><td class="v">R$ 109</td><td>Planos Essencial e Profissional</td></tr>
+<tr><td class="pl">Avançado</td><td class="v">R$ 163</td><td>Plano Completo com IA</td></tr>
+<tr><td class="pl">Pro</td><td class="v">R$ 245</td><td>Equipes maiores e operações avançadas</td></tr>
+</tbody>
+</table>
+</div>
+<div class="ex rv"><b class="big">R$ 327/mês</b><span><b>Exemplo:</b> 3 vendedores no plano Básico (3 × R$ 109) de licença, além da implantação.</span></div>
+<p class="fine rv">Valores de tabela do Kommo, sujeitos a reajuste. Como parceiro oficial, eu te ajudo a contratar o plano certo, sem pagar por usuário que você não precisa.</p>
+</div>
+</section>
+
+<section class="dark">
+<div class="wrap">
+<div class="eyebrow rv">Depois da implantação</div>
+<h2 class="rv">Acompanhamento mensal para o comercial <em>continuar evoluindo</em></h2>
+<p class="sub rv">Opcional. Contrato mínimo de 3 meses.</p>
+<div class="g3">
+<div class="svc rv"><h3>Básico</h3><div class="mp">R$ 497<small>/mês</small></div><ul><li>Suporte pelo WhatsApp em horário comercial</li><li>Ajustes no CRM e nas automações</li><li>1 reunião mensal de resultados</li></ul></div>
+<div class="svc hl rv"><span class="tagx">⭐ Recomendado</span><h3>Estratégico</h3><div class="mp">R$ 997<small>/mês</small></div><ul><li>Tudo do Básico</li><li>2 campanhas de disparo por mês</li><li>Análise do dashboard e plano de ação</li><li>Reunião quinzenal com o dono ou gestor</li></ul></div>
+<div class="svc rv"><h3>Gestão Comercial</h3><div class="mp">R$ 1.497<small>/mês</small></div><ul><li>Tudo do Estratégico</li><li>Campanhas de disparo semanais</li><li>Treinamento contínuo da equipe</li><li>Acompanhamento de metas e reunião semanal</li></ul></div>
+</div>
+</div>
+</section>
+
+<section style="background:var(--paper2)" id="duvidas">
+<div class="wrap">
+<div class="center"><div class="eyebrow rv">Dúvidas</div><h2 class="rv">Perguntas <em>frequentes</em></h2></div>
+<div class="faq rv">
+<details><summary>Preciso entender de tecnologia?</summary><p>Não. Eu configuro tudo e treino a sua equipe em linguagem simples, passo a passo.</p></details>
+<details><summary>Posso usar o meu número de WhatsApp atual?</summary><p>Sim. Ele é conectado ao CRM e todos os atendentes usam o mesmo número, cada um com o seu acesso.</p></details>
+<details><summary>Vou perder as conversas se o celular quebrar ou a memória encher?</summary><p>Não. Tudo fica salvo na nuvem, acessível pelo computador ou por qualquer celular da equipe.</p></details>
+<details><summary>E se um vendedor sair da empresa?</summary><p>Os clientes e as conversas ficam no CRM, não no celular dele. O cliente continua sendo da sua empresa.</p></details>
+<details><summary>Disparo de mensagens pode bloquear o meu WhatsApp?</summary><p>Feito do jeito errado, pode. Por isso trabalho com aquecimento do número, controle de quem já recebeu e ritmo de envio seguro.</p></details>
+<details><summary>A licença do CRM está inclusa?</summary><p>Não. Ela é paga à parte, por usuário. Os valores estão nesta página para você saber o investimento total antes de conversarmos.</p></details>
+<details><summary>Qual plano é o certo para mim?</summary><p>No diagnóstico gratuito eu te indico o plano ideal para o momento da sua empresa.</p></details>
+</div>
+</div>
+</section>
+
+<section class="final">
+<div class="wrap">
+<h2 class="rv">Pronto para parar de perder vendas <em>no WhatsApp?</em></h2>
+<p class="rv">Agende o seu diagnóstico gratuito e descubra quanto a sua empresa pode vender a mais com o comercial organizado.</p>
+<div class="ctas rv">
+<a href="#" class="btn btn-dark wa"><svg><use href="#wa"/></svg> Falar com o Pablio</a>
+<a href="#planos" class="btn btn-ghost">Ver planos</a>
+</div>
+</div>
+</section>
+
+<footer>
+<div class="wrap">
+<div>
+<a href="/" class="logo" style="margin-bottom:8px"><i>P</i>Pablio <span>Tavares</span></a>
+<div>Gestão comercial, CRM e IA aplicada a vendas · Goiânia, GO</div>
+<div style="margin-top:4px"><a class="pp" href="/">Voltar ao site</a> · <a class="pp" href="/privacidade.html">Política de privacidade</a></div>
+</div>
+<a href="https://www.instagram.com/pabliotavarescomercial" target="_blank" rel="noopener" class="pp">@pabliotavarescomercial</a>
+</div>
+</footer>
+
+<a class="fab wa" href="#" aria-label="Falar no WhatsApp"><svg><use href="#wa"/></svg></a>
+<div class="bar" id="bar"><a href="#" class="btn btn-o wa">Agendar diagnóstico gratuito</a></div>
+
+<script>
+(function(){
+var base = "https://wa.me/" + CONFIG.WHATSAPP + "?text=";
+document.querySelectorAll(".wa").forEach(function(a){
+a.href = base + encodeURIComponent(a.getAttribute("data-msg") || CONFIG.MSG_CRM);
+a.target = "_blank"; a.rel = "noopener";
+});
+var io = new IntersectionObserver(function(es){ es.forEach(function(e){ if (e.isIntersecting) { e.target.classList.add("on"); io.unobserve(e.target); } }); }, {threshold:.1});
+document.querySelectorAll(".rv").forEach(function(el){ io.observe(el); });
+var bar = document.getElementById("bar");
+new IntersectionObserver(function(es){ bar.classList.toggle("hide", es[0].isIntersecting); }, {threshold:.15}).observe(document.querySelector(".hero"));
+})();
+</script>
+</body>
+</html>
