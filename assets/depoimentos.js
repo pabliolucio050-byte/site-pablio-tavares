@@ -47,7 +47,7 @@ window.DEPOIMENTOS = [
     aprovado: true
   },
   {
-    nome: "Farol Carias",
+    nome: "Carol Cariis",
     cargo: "Advogada",
     segmento: "Advocacia",
     local: "",
