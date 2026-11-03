@@ -111,6 +111,17 @@ nav .wrap{display:flex;align-items:center;justify-content:space-between;height:6
 .plan.hl .price{color:#fff}
 .pnote{font-size:13px;color:var(--mu);margin-top:10px;padding-bottom:18px;border-bottom:1px solid var(--line)}
 .plan.hl .pnote{color:#A79D93;border-color:rgba(255,255,255,.12)}
+.from{font-size:14.5px;color:var(--mu);margin-bottom:8px;display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.from s{text-decoration-thickness:1.5px}
+.off{margin-left:4px;font-size:11.5px;font-weight:700;letter-spacing:.3px;color:#1E7A4F;background:#E3F5EC;border-radius:20px;padding:3px 9px}
+.plan.hl .from{color:#A79D93}
+.plan.hl .off{background:rgba(63,179,127,.18);color:#7FE0B0}
+.inst{font-size:15px;margin-top:10px}
+.inst b{color:var(--o-d);font-weight:600}
+.plan.hl .inst{color:#EFE9E2}
+.plan.hl .inst b{color:#F0A27F}
+.lanc{display:block;font-size:12.5px;font-weight:600;color:var(--o-d);margin-top:4px}
+.plan.hl .lanc{color:#F0A27F}
 .plan ul{list-style:none;display:flex;flex-direction:column;gap:9px;margin:18px 0 20px;flex:1}
 .plan li{font-size:14.5px;padding-left:24px;position:relative}
 .plan li:before{content:"";position:absolute;left:1px;top:7px;width:12px;height:7px;border-left:2px solid var(--o);border-bottom:2px solid var(--o);transform:rotate(-45deg)}
@@ -305,8 +316,12 @@ MSG_CRM: "Olá Pablio! Vi a página de implantação de CRM e quero agendar o di
 <div class="plan rv">
 <h3>Essencial</h3>
 <p class="tg">Para quem está começando a organizar o comercial.</p>
+<div class="pblock" data-lanc="1997" data-tabela="2497">
+<div class="from">De <s>R$ 2.497</s> por <span class="off">Economize R$ 500</span></div>
 <div class="price"><small>R$</small>1.997</div>
-<p class="pnote">pagamento único + licença do CRM</p>
+<p class="inst">ou <b>12x de R$ 166,42</b> no cartão</p>
+<p class="pnote">pagamento único + licença do CRM<span class="lanc">Condição de lançamento até 30/11</span></p>
+</div>
 <ul>
 <li>CRM configurado com até 3 usuários</li>
 <li>1 funil de vendas com as etapas do seu negócio</li>
@@ -323,8 +338,12 @@ MSG_CRM: "Olá Pablio! Vi a página de implantação de CRM e quero agendar o di
 <span class="tagx">⭐ Mais escolhido</span>
 <h3>Profissional</h3>
 <p class="tg">Para quem quer vender com processo e não perder nenhuma venda.</p>
+<div class="pblock" data-lanc="3497" data-tabela="4497">
+<div class="from">De <s>R$ 4.497</s> por <span class="off">Economize R$ 1.000</span></div>
 <div class="price"><small>R$</small>3.497</div>
-<p class="pnote">pagamento único + licença do CRM</p>
+<p class="inst">ou <b>12x de R$ 291,42</b> no cartão</p>
+<p class="pnote">pagamento único + licença do CRM<span class="lanc">Condição de lançamento até 30/11</span></p>
+</div>
 <ul>
 <li><b>Tudo do Essencial</b>, com até 10 usuários</li>
 <li>Até 3 funis: vendas, pós venda e reativação</li>
@@ -341,8 +360,12 @@ MSG_CRM: "Olá Pablio! Vi a página de implantação de CRM e quero agendar o di
 <div class="plan rv">
 <h3>Completo com IA</h3>
 <p class="tg">Para quem quer o comercial funcionando 24 horas.</p>
+<div class="pblock" data-lanc="5997" data-tabela="7497">
+<div class="from">De <s>R$ 7.497</s> por <span class="off">Economize R$ 1.500</span></div>
 <div class="price"><small>R$</small>5.997</div>
-<p class="pnote">pagamento único + licença do CRM</p>
+<p class="inst">ou <b>12x de R$ 499,75</b> no cartão</p>
+<p class="pnote">pagamento único + licença do CRM<span class="lanc">Condição de lançamento até 30/11</span></p>
+</div>
 <ul>
 <li><b>Tudo do Profissional</b></li>
 <li>Agente de IA no WhatsApp e no Instagram, treinado com a sua empresa</li>
@@ -356,7 +379,7 @@ MSG_CRM: "Olá Pablio! Vi a página de implantação de CRM e quero agendar o di
 <a href="#" class="btn btn-out wa" data-msg="Olá Pablio! Tenho interesse no plano Completo com IA de implantação de CRM.">Quero o Completo</a>
 </div>
 </div>
-<div class="center"><div class="facts rv"><span>💳 50% na assinatura e 50% na entrega, ou em até 6x no cartão</span><span>⚡ 5% de desconto à vista no Pix</span><span>✈️ Fora de Goiânia: deslocamento e hospedagem por conta do cliente</span></div></div>
+<div class="center"><div class="facts rv"><span>💳 50% na assinatura e 50% na entrega, ou em até 12x no cartão</span><span>⚡ 5% de desconto à vista no Pix</span><span>✈️ Fora de Goiânia: deslocamento e hospedagem por conta do cliente</span></div></div>
 </div>
 </section>
 
@@ -444,6 +467,18 @@ document.querySelectorAll(".wa").forEach(function(a){
 a.href = base + encodeURIComponent(a.getAttribute("data-msg") || CONFIG.MSG_CRM);
 a.target = "_blank"; a.rel = "noopener";
 });
+// Condição de lançamento: a partir de 01/12 os planos passam automaticamente para o valor de tabela.
+var FIM_LANCAMENTO = new Date("2026-12-01T00:00:00-03:00");
+if (new Date() >= FIM_LANCAMENTO) {
+var brl = function(v){ return v.toLocaleString("pt-BR", {minimumFractionDigits: v % 1 ? 2 : 0, maximumFractionDigits: 2}); };
+document.querySelectorAll(".pblock").forEach(function(b){
+var t = +b.getAttribute("data-tabela");
+b.querySelector(".from").remove();
+b.querySelector(".lanc").remove();
+b.querySelector(".price").innerHTML = "<small>R$</small>" + brl(t);
+b.querySelector(".inst b").textContent = "12x de R$ " + brl(Math.round(t / 12 * 100) / 100);
+});
+}
 var io = new IntersectionObserver(function(es){ es.forEach(function(e){ if (e.isIntersecting) { e.target.classList.add("on"); io.unobserve(e.target); } }); }, {threshold:.1});
 document.querySelectorAll(".rv").forEach(function(el){ io.observe(el); });
 var bar = document.getElementById("bar");
