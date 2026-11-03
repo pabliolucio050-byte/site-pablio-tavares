@@ -320,7 +320,7 @@ MSG_CRM: "Olá Pablio! Vi a página de implantação de CRM e quero agendar o di
 <div class="from">De <s>R$ 2.497</s> por <span class="off">Economize R$ 500</span></div>
 <div class="price"><small>R$</small>1.997</div>
 <p class="inst">ou <b>12x de R$ 166,42</b> no cartão</p>
-<p class="pnote">pagamento único + licença do CRM<span class="lanc">Condição de lançamento até 30/11</span></p>
+<p class="pnote">pagamento único + licença do CRM<span class="lanc">Condição Black Friday até 30/11</span></p>
 </div>
 <ul>
 <li>CRM configurado com até 3 usuários</li>
@@ -342,7 +342,7 @@ MSG_CRM: "Olá Pablio! Vi a página de implantação de CRM e quero agendar o di
 <div class="from">De <s>R$ 4.497</s> por <span class="off">Economize R$ 1.000</span></div>
 <div class="price"><small>R$</small>3.497</div>
 <p class="inst">ou <b>12x de R$ 291,42</b> no cartão</p>
-<p class="pnote">pagamento único + licença do CRM<span class="lanc">Condição de lançamento até 30/11</span></p>
+<p class="pnote">pagamento único + licença do CRM<span class="lanc">Condição Black Friday até 30/11</span></p>
 </div>
 <ul>
 <li><b>Tudo do Essencial</b>, com até 10 usuários</li>
@@ -364,7 +364,7 @@ MSG_CRM: "Olá Pablio! Vi a página de implantação de CRM e quero agendar o di
 <div class="from">De <s>R$ 7.497</s> por <span class="off">Economize R$ 1.500</span></div>
 <div class="price"><small>R$</small>5.997</div>
 <p class="inst">ou <b>12x de R$ 499,75</b> no cartão</p>
-<p class="pnote">pagamento único + licença do CRM<span class="lanc">Condição de lançamento até 30/11</span></p>
+<p class="pnote">pagamento único + licença do CRM<span class="lanc">Condição Black Friday até 30/11</span></p>
 </div>
 <ul>
 <li><b>Tudo do Profissional</b></li>
@@ -467,7 +467,7 @@ document.querySelectorAll(".wa").forEach(function(a){
 a.href = base + encodeURIComponent(a.getAttribute("data-msg") || CONFIG.MSG_CRM);
 a.target = "_blank"; a.rel = "noopener";
 });
-// Condição de lançamento: a partir de 01/12 os planos passam automaticamente para o valor de tabela.
+// Condição Black Friday: a partir de 01/12 os planos passam automaticamente para o valor de tabela.
 var FIM_LANCAMENTO = new Date("2026-12-01T00:00:00-03:00");
 if (new Date() >= FIM_LANCAMENTO) {
 var brl = function(v){ return v.toLocaleString("pt-BR", {minimumFractionDigits: v % 1 ? 2 : 0, maximumFractionDigits: 2}); };
